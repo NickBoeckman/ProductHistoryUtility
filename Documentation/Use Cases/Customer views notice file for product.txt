@@ -1,0 +1,20 @@
+1. Title: Customer views notice file for product.
+2. Primary Actor: Customer
+3. Goal in Context: To let the customer know about packages and software used in different devices.
+4. Stakeholders and Interests:
+	1. Customer:
+		1. To know about the information contained in notice file.
+	2. Product Manager:
+		1. To let customer know about packages used in their product as required by licenses.
+		2. To distribute notice files to all customers upon any software updates.
+5. Preconditions:
+	1. The customer knows what a QR code is.
+	2. The customer is able to scan a QR code.
+	3. The customer has internet access.
+6. Main Success Scenario:
+	1. The customer is able to see the notice file online.
+7. Failed End Condition:
+	1. The website is down.
+	2. The data base cannot be accessed.
+8. Trigger: Customer receives message about software update.
+9. Notes: There may be some cases where a direct URL would be preferable over a QR code.

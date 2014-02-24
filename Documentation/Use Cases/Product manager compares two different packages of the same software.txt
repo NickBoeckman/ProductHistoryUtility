@@ -1,0 +1,19 @@
+1. Title: Product manager compares two different packages of the same software.
+2. Primary Actor: Product Manager
+3. Goal in Context: To show the differences between two different packages to the product manager.
+4. Stakeholders and Interests:
+	1. Product Manager:
+		1. To know differences between different versions of packages and connect the correct version of software with a given package.
+		2. To ensure correct usage of licenses in their products.
+	2. Internal Programmers:
+		1. To know the version of each package they use in a product so they can make changes while adhering to license restrictions.
+5. Preconditions:
+	1. Each package is located in the database.
+	2. Each package is a different version of the same software.
+6. Main Success Scenario:
+	1. Differences are displayed and viewed through user interface.
+7. Failed End Condition:
+	1. Packages from two different pieces of software are selected.
+	2. One of the packages given cannot be located in the database.
+8. Trigger: Product manager selects two packages for comparison.
+9. Notes: Comparing a package to itself will not cause the program to fail. However, if a package is compared to itself, the results for every file in that package should be equivalent.
