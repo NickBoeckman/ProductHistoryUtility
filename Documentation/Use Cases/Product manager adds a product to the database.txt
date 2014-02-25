@@ -1,24 +1,22 @@
 1. Title: Product manager adds a product to the database.
 2. Primary Actor: Product Manager
 3. Goal in Context:
-	1. To create a new product to associate different pieces of software with.
-	2. To generate notice files for new products.
+	1. To create a new product in the database to associate the product with a SPDX document.
+	2. To generate change logs between software revisions.
 4. Stakeholders and Interests:
 	1. Product Manager:
-		1. To make sure that all code is documented for a new product.
-		2. To keep track of each product as they are created.
-		3. To adhere to license requirements when distributing packages.
+		1. To make sure that all licenses within the code are documented properly for a new product.
+		3. To adhere to license requirements when distributing products.
 	2. Customers:
-		1. To know more about the product they are using
+		1. To know more about the product they are using.
 5. Preconditions:
 	1. A new product has been created.
 	2. The product being created has no previous versions.
-	3. The product code needs to be documented for display to customers.
+	3. The product code's licenses needs to be documented for display to customers.
 6. Main Success Scenario:
 	1. Product has been successfully added to the database.
 7. Failed End Condition:
-	1. Not all pieces of information needed for a submission to the database were given.
-	2. The product has no associated software or packages.
-	3. The database cannot be accessed.
+	1. Not all of the needed information  for a product were submitted to the database.
+	2. The database cannot be accessed.
 8. Trigger: A new product has been created and needs to be documented.
-9. Notes: At the current time, it is unknown whether or not the product manager will have to associate any specific piece of software to a product when it is first created. This issue may therefore not be needed depending on the structure.
+9. Notes:
