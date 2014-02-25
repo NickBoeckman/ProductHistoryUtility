@@ -6,7 +6,7 @@
 4. Stakeholders and Interests:
 	1. Product Manager:
 		1. To make sure that all licenses within the code are documented properly for a new product.
-		3. To adhere to license requirements when distributing products.
+		2. To adhere to license requirements when distributing products.
 	2. Customers:
 		1. To know more about the product they are using.
 5. Preconditions:
