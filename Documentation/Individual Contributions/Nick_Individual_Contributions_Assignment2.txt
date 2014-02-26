@@ -3,28 +3,38 @@ Group: Product History Utility
 
 1) Explain how you were involved in the group.
 
-	My position in the group has mainly been to make sure that we are covering the requirements for the assignment, which leads to discussion on the different requirements at group meetings.
+	My position in the group has mainly been to make sure that we are covering the requirements for the assignment,
+	which leads to discussion on the different requirements at group meetings.
 
 2) What did you specifically contribute to the group? Not, how did you help someone else. 
 
-	My sepcific contributions to the group for this assignment were creating both the use cases and data decomposition of the PHU system, as part of the documentation on our plans for the system.
+	My sepcific contributions to the group for this assignment were creating both the use cases and data
+	decomposition of the PHU system, as part of the documentation on our plans for the system.
 
 3) What would you like me to specifically grade you on because you feel that it is most representative of your work? 
 
-	I feel that both the use cases and data decomposition are most reporesentative of my individual work on this assignment. Both section were mostly written by myself with a few ideas for changes from my team members.
+	I feel that both the use cases and data decomposition are most reporesentative of my individual work on this
+	assignment. Both section were mostly written by myself with a few ideas for changes from my team members.
 
 4) How did you coordinate your group activities between the various components? 
 
-	Group activities were divided up into small portions. Each of us has different strenghts and weaknesses, like myself being the person on the team most familiar with use cases.
+	Group activities were divided up into small portions. Each of us has different strenghts and weaknesses,
+	like myself being the person on the team most familiar with use cases.
 
 5) What were your experiences and difficulties with this assignment? 
 
-	I still don't feel I fully understand what data decomposition actually is, whether that be showing the project through screenshots, or giving an idea of the rough process behind each component. I chose to do both for the pieces I could to give a better understanding of what was actually going on.
+	I still don't feel I fully understand what data decomposition actually is, whether that be showing the
+	project through screenshots, or giving an idea of the rough process behind each component. I chose to do
+	both for the pieces I could to give a better understanding of what was actually going on.
 
-	The other thing that felt really odd is the actual numbering system that the use cases were supposed to follow. It makes sense, but it seems like the structure just isn't very intuitive. 
+	The other thing that felt really odd is the actual numbering system that the use cases were supposed to
+	follow. It makes sense, but it seems like the structure just isn't very intuitive. 
 
 6) What are you going to do differently next assignment to overcome these difficulties? 
 
-	I feel that the difficulties I had with this assignment will naturally fix themselves upon coding the actual system. Since I already have a rough idea of what the system is trying to accomplish, the main part will be conforming to any defined standards for the decomposition, which even doing a Google search showed nothing about.
+	I feel that the difficulties I had with this assignment will naturally fix themselves upon coding the
+	actual system. Since I already have a rough idea of what the system is trying to accomplish, the main
+	part will be conforming to any defined standards for the decomposition, which even doing a Google search
+	showed nothing about.
 
 Signed off by:
