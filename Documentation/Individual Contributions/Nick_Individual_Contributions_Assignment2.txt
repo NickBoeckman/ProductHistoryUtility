@@ -36,6 +36,9 @@ Group: Product History Utility
 	actual system. Since I already have a rough idea of what the system is trying to accomplish, the main
 	part will be conforming to any defined standards for the decomposition, which even doing a Google search
 	showed nothing about.
+	
+Note: This was written before receiving the feedback on the data decomposition. The work to update the data
+decomposition to the suggested standards was mostly done by other team members.
 
 Signed off by: 
 David Le
