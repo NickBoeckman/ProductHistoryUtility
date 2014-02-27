@@ -1,0 +1,36 @@
+Name: Zachary McFarland
+Group: Product History Utility
+
+1) Explain how you were involved in the group.
+
+  I was mainly involved in creating the prototype of the system for this project. I also did alot of the editing and
+  revising on the different documents.
+
+2) What did you specifically contribute to the group? Not, how did you help someone else. 
+
+	My sepcific contribution to the group was creating the working prototype for assignment one. I also helped work with
+	the documentation but mostly just helped edit what Nick and David where doing.
+
+3) What would you like me to specifically grade you on because you feel that it is most representative of your work? 
+
+	I think the system prototype would be the most represintitve of my work for this assignment.
+
+4) How did you coordinate your group activities between the various components? 
+
+	Group activities were divided up into small portions. Each of us has different strenghts and weaknesses. We mostly 
+	collaborated via google docs.
+
+5) What were your experiences and difficulties with this assignment? 
+
+	I think our main struggles where with the dataflow diagram no one in our group had a lot of experince making DFD's 
+	however with a combination of advice from the Professor and David's hard work I think we have come up with a good DFD.
+
+6) What are you going to do differently next assignment to overcome these difficulties? 
+
+  I think we may want to try and approach DFD's in a different direction next time. Instead of creating the DFD and then 
+  decomposing it, we should try writing the decompisition first and then creating a dfd of that.
+
+
+Signed off by: 
+David Le
+Nick Boeckman
