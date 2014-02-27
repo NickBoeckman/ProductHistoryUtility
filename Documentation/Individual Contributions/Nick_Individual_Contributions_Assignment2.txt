@@ -37,4 +37,6 @@ Group: Product History Utility
 	part will be conforming to any defined standards for the decomposition, which even doing a Google search
 	showed nothing about.
 
-Signed off by: David Le
+Signed off by: 
+David Le
+Zachary McFarland
