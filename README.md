@@ -1,4 +1,4 @@
-CSCI-4900
+Product History Utility
 =========
 
 Open Systems Development Class Repository
