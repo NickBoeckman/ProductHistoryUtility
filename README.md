@@ -10,4 +10,4 @@ License
 Creative Commmons BY-SA-3.0
 
 Prototype
-Hosted prototype: http://54.218.86.78/SPDX/index.php
+Hosted prototype: http://54.218.86.78/SPDX/phu/index.php
