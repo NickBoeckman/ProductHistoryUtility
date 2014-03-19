@@ -1,11 +1,11 @@
 SPDX Product History Utility
 =========
 
-<h5>Description</h5>
+<h5>System Overview</h5>
 <p>The Software Package Data Exchange (SPDX) specification is a formatting standard for
 communicating the licenses and copyrights associated with a software package. Being able to
 explicate this information is a required function for operations support system management
-within an organization.
+within an organization.<br/>
 The SPDX Dashboard, located at <a href="http://spdxhub.ist.unomaha.edu/">http://spdxhub.ist.unomaha.edu/</a> will serve as the central
 repository for SPDX documents, facilitating uploads, retrieval, modification, and sharing of SPDX
 documents. The goal of the Product History Utility (PHU) is to enable a company to create a
@@ -13,25 +13,59 @@ relationships between the SPDX documents and the products that contain�
 The Product History Utility will be created as a component of the SPDX Dashboard. Having the
 Product History Utility  as a part of the SPDX Dashboard will remove the headache of
 maintaining two separate databases of license documentation, and hopefully make the entire
-toolset more usable.
+toolset more usable.<br/>
 The PHU will create a relationship between a company’s products, such as televisions or
 computers, and the software packages that apply to them. This will allow the Product History
 Utility to establish relationships between revisions of software, thereby allowing for report
-generation of license changes to products and packages over time.
+generation of license changes to products and packages over time.<br/>
 One of the requirements of companies that distribute licensed software is to notify the consumer
 of any license changes that may occur to their products. The PHU will provide a simple solution,
 by generating QR codes that will link the consumers back to the license change page and  can
 be attached to the product at the time of sale. </p>
 
+<h5>Version</h5>
+Version 1.0
+
 <h5>License</h5>
-Code: Apache 2.0
+Source  Code: Apache 2.0
 Documentation: Creative Commmons BY-SA-3.0
 
+<h5>Copyright</h5>
+copyright © 2014 David Le, Nick Boeckman, Zachary McFarland
+
+<h5>Technical Specifications</h5>
+Processor: 4 Ghz
+OS: Ubuntu 12.04 LTS
+Dependencies: Apache, mySql
+Memory: 16 Gb
+
+<h5>System Design</h5>
+<a href="https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Documentation/Dataflow%20Diagram%20and%20Decomposition/DataflowDiagram.pdf>https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Documentation/Dataflow%20Diagram%20and%20Decomposition/DataflowDiagram.pdf</a>
+
+<h5>Installation</h5>
+
+<h5>Usage</h5>
+Screen shots: <a href="https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/img">https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/img</a>
+
+Working System Example: <a href="http://54.218.86.78/SPDX/phu/index.php">http://54.218.86.78/SPDX/phu/index.php</a>
+
+<h5>Communities</h5>
+SPDX OSS Community
+
+<h5>Communication</h5>
+
+<h5>Code Management</h5>
+Contributions to the PHU will be decided by a community vote.
+Changes to SPDX tooling standards will be brought to advisory board: <a href="https://trello.com/b/IfA3oIhe/spdx­tools">https://trello.com/b/IfA3oIhe/spdx­tools</a>
+
+
+<h1>OLD</h1>
+The data flow diagram listed at
+<a href="https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/Documentation">https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/Documentation</a> is an overview
+of the system as it related to the SPDX Product History Utility  module, including the different
+components of the module, and how they interrelate with the dashboard and database.
 <h5>Prototype</h5>
 Hosted prototype: http://54.218.86.78/SPDX/phu/index.php
-
-Members
-David Le, Nick Boeckman, Zac McFarland
 
 System Requirements
  GitHub Repository for code/documentation
@@ -42,12 +76,9 @@ System Requirements
 ­ Dashboard API ­ https://github.com/joerter/spdx­dashboard
 ­ System specifications for host server ­ SPDX dev
 ­ Domain name: spdx.ist.unomaha.edu
-­ Processor: 4 Ghz
-­ OS: Ubuntu 12.04 LTS
-­ Dependencies: Apache, mySql
-­ Memory: 16 GbStakeholders:
+bStakeholders:
 
-SPDX OSS Community
+
 
 <h5>Community Management Plan</h5>
 Our team holds regular meetings every Tuesday at 5:30, in addition to class times on
@@ -83,11 +114,7 @@ development team will be reviewed by the team and then decided by a�
 the release of the PHU, additional contributions will be decided through a community vote.Any changes to SPDX tooling standards will be brought to the appropriate advisory boards within
 the class.
 
-<h5>Structure Data Flow Diagram</h5>
-The data flow diagram listed at
-<a href="https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/Documentation">https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/Documentation</a> is an overview
-of the system as it related to the SPDX Product History Utility  module, including the different
-components of the module, and how they interrelate with the dashboard and database.
+
 
 <h5>Database</h5>
 The Product History Utility will use a mySQL database hosted at spdx.ist.unomaha.edu. PHU will
@@ -101,4 +128,3 @@ To view the schema please visit the following url:
 <a href="https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Data%20Schemas/SPDXDatabaseSchema.xls">https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Data%20Schemas/SPDXDatabaseSchema.xls</a>
 
 
-copyright © 2014 David Le, Nick Boeckman, Zachary McFarland
