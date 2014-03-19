@@ -6,7 +6,7 @@ SPDX Product History Utility
 communicating the licenses and copyrights associated with a software package. Being able to
 explicate this information is a required function for operations support system management
 within an organization.
-The SPDX Dashboard, located at http://spdxhub.ist.unomaha.edu/ will serve as the central
+The SPDX Dashboard, located at <a href="http://spdxhub.ist.unomaha.edu/">http://spdxhub.ist.unomaha.edu/</a> will serve as the central
 repository for SPDX documents, facilitating uploads, retrieval, modification, and sharing of SPDX
 documents. The goal of the Product History Utility (PHU) is to enable a company to create a
 relationships between the SPDX documents and the products that contain those licenses.
@@ -55,7 +55,7 @@ Mondays and Wednesdays. We have utilized a number of correspondence me
 email, Google Docs, Trello, and the GitHub repository.
 
 Communication with the SPDX community will take place within the GitHub repository :
-https://github.com/zwmcfarland/ProductHistoryUtility
+<a href="https://github.com/zwmcfarland/ProductHistoryUtility">https://github.com/zwmcfarland/ProductHistoryUtility</a>
 In order to fully engage the community, we first need to inform them of our project. We are
 planning to make an announcement to the SPDX­General mailing list describing our work and
 what our goals are shortly after February 26th. In the announcement, we will release a working
@@ -63,7 +63,7 @@ prototype and a link to our GitHub repository to the community so th
 of our project.
 Since we will need to use the API created by the dashboard team for communication with the
 server, we will relay any additional needed queries through email, in­class discussion, and the
-SPDX Tooling Trello Board https://trello.com/b/IfA3oIhe/spdx­tools.
+SPDX Tooling Trello Board <a href="https://trello.com/b/IfA3oIhe/spdx­tools">https://trello.com/b/IfA3oIhe/spdx­tools</a>.
 
 <h5>Distribution System</h5>
 All of our assignments, documentation, and source code will be uploaded to the project’s GitHub
@@ -73,7 +73,7 @@ specifically. Any information we may have that will be useful to othe
 schema changes, will be posted to the SPDX Tooling Trello Board.
 
 <h5>Description of Community Representation</h5>
-A prototype will be hosted at:  http://54.218.86.78/SPDX/index.php
+A prototype will be hosted at:  <a href="http://54.218.86.78/SPDX/index.php">http://54.218.86.78/SPDX/index.php</a>
 A GitHub repository will contain source code and use cases.
 https://github.com/zwmcfarland/ProductHistoryUtility
 
@@ -85,7 +85,7 @@ the class.
 
 <h5>Structure Data Flow Diagram</h5>
 The data flow diagram listed at
-https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/Documentation is an overview
+<a href="https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/Documentation">https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/Documentation</a> is an overview
 of the system as it related to the SPDX Product History Utility  module, including the different
 components of the module, and how they interrelate with the dashboard and database.
 
@@ -98,7 +98,7 @@ every SPDX tooling team.
 <h5>Data Schema</h5>
 The data schema used in our project will be the same as the rest of the SPDX Tooling groups.
 To view the schema please visit the following url:
-https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Data%20Schemas/SPDXDatabaseSchema.xls
+<a href="https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Data%20Schemas/SPDXDatabaseSchema.xls">https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Data%20Schemas/SPDXDatabaseSchema.xls</a>
 
 
 copyright © 2014 David Le, Nick Boeckman, Zachary McFarland
