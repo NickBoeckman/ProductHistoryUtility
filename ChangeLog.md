@@ -4,7 +4,22 @@ Change Log
 <h3>Version 1.0     03/19/2014</h3>
   <h4>Features</h4>
     <ul>
-      <li>Add Products</li>
+      <li>Products
+        <ul>
+          <li>Add Products</li>
+          <li>View Products</li>
+          <li>Edit Products</li>
+        </ul
+      </li>
+      <li>Software
+        <ul>
+          <li>Add Software</li>
+          <li>View Software</li>
+          <li>Edit Software</li>
+        </ul>
+      </li>
+      <li>Add Packages to Software</li>
+      <li>Generate Product QR Codes</li>
     </ul>
   <h4>Documentation</h4>
     <ul>
@@ -22,5 +37,6 @@ Change Log
           </li>
         </ul>
       </li>
+      <li><a href="https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/CCLicense.txt">License.txt</a></li>
     </ul>
   
