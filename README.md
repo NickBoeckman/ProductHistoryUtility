@@ -24,7 +24,8 @@ by generating QR codes that will link the consumers back to the lice
 be attached to the product at the time of sale. </p>
 
 <h5>License</h5>
-Creative Commmons BY-SA-3.0
+Code: Apache 2.0
+Documentation: Creative Commmons BY-SA-3.0
 
 <h5>Prototype</h5>
 Hosted prototype: http://54.218.86.78/SPDX/phu/index.php
@@ -99,7 +100,5 @@ The data schema used in our project will be the same as the rest o
 To view the schema please visit the following url:
 https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Data%20Schemas/SPDXDatabaseSchema.xls
 
-</h5>Copyright/License Declaration</h5>
-Creative Commons BY­SA­3.0 ­ Chosen because it allows people to share and adapt for any
-purpose. A copy of the license text can be found in our gitHub repository.
+
 copyright © 2014 David Le, Nick Boeckman, Zachary McFarland
