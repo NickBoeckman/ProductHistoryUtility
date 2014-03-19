@@ -26,7 +26,7 @@ be attached to the product at the time of sale. </p>
 <h5>License</h5>
 Creative Commmons BY-SA-3.0
 
-<h5>Prototype<h5>
+<h5>Prototype</h5>
 Hosted prototype: http://54.218.86.78/SPDX/phu/index.php
 
 Members
@@ -97,8 +97,7 @@ every SPDX tooling team.
 <h5>Data Schema</h5>
 The data schema used in our project will be the same as the rest of the SPDX Tooling groups.
 To view the schema please visit the following url:
-https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Data%20Schemas/SPDXData
-baseSchema.xls
+https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Data%20Schemas/SPDXDatabaseSchema.xls
 
 </h5>Copyright/License Declaration</h5>
 Creative Commons BY­SA­3.0 ­ Chosen because it allows people to share and adapt for any
