@@ -13,12 +13,11 @@ SPDX Product History Utility
   
   <p>
     The <a href="http://spdxhub.ist.unomaha.edu/">SPDX Dashboard</a> will serve as the central                              repository for SPDX documents, facilitating uploads, retrieval, modification, and sharing of SPDX
-    documents. The goal of the Product History Utility (PHU) is to enable a company to create a
+    documents. The goal of the Product History Utility (PHU) is to enable a company to create
     relationships between the SPDX documents and the products that contain those licenses.
     The Product History Utility will be created as a component of the SPDX Dashboard. Having the
-    Product History Utility  as a part of the SPDX Dashboard will remove the headache of
-    maintaining two separate databases of license documentation, and hopefully make the entire
-    toolset more usable.
+    Product History Utility  as a part of the SPDX Dashboard will remove the need for
+    maintaining two separate databases of license documentation, and increase the SPDX toolset.
   </p>
   
   <p>
@@ -31,7 +30,7 @@ SPDX Product History Utility
   <p>
     One of the requirements of companies that distribute licensed software is to notify the consumer
     of any license changes that may occur to their products. The PHU will provide a simple solution,
-    by generating QR codes that will link the consumers back to the license change page and  can
+    by generating QR codes that will link the consumers back to the license change page and can
     be attached to the product at the time of sale. 
   </p>
 </div>
@@ -74,6 +73,7 @@ Working System Example: <a href="http://54.218.86.78/SPDX/phu/index.php">http://
 SPDX OSS Community
 
 <h5>Communication</h5>
+The PHU team can be contacted through the <a href="https://lists.spdx.org/mailman/listinfo/spdx-tech">SPDX-Tech mailing list.</a>
 
 <h5>Code Management</h5>
 Contributions to the PHU will be decided by a community vote.
