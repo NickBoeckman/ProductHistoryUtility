@@ -2,47 +2,68 @@ SPDX Product History Utility
 =========
 
 <h5>System Overview</h5>
-<p>The Software Package Data Exchange (SPDX) specification is a formatting standard for
-communicating the licenses and copyrights associated with a software package. Being able to
-explicate this information is a required function for operations support system management
-within an organization.<br/>
-The SPDX Dashboard, located at <a href="http://spdxhub.ist.unomaha.edu/">http://spdxhub.ist.unomaha.edu/</a> will serve as the central
-repository for SPDX documents, facilitating uploads, retrieval, modification, and sharing of SPDX
-documents. The goal of the Product History Utility (PHU) is to enable a company to create a
-relationships between the SPDX documents and the products that contain those licenses.
-The Product History Utility will be created as a component of the SPDX Dashboard. Having the
-Product History Utility  as a part of the SPDX Dashboard will remove the headache of
-maintaining two separate databases of license documentation, and hopefully make the entire
-toolset more usable.<br/>
-The PHU will create a relationship between a company’s products, such as televisions or
-computers, and the software packages that apply to them. This will allow the Product History
-Utility to establish relationships between revisions of software, thereby allowing for report
-generation of license changes to products and packages over time.<br/>
-One of the requirements of companies that distribute licensed software is to notify the consumer
-of any license changes that may occur to their products. The PHU will provide a simple solution,
-by generating QR codes that will link the consumers back to the license change page and  can
-be attached to the product at the time of sale. </p>
 
-<h5>Version</h5>
-Version 1.0
+<div>
+  <p>
+    The Software Package Data Exchange (SPDX) specification is a formatting standard for
+    communicating the licenses and copyrights associated with a software package. Being able to
+    explicate this information is a required function for operations support system management
+    within an organization.
+  </p>
+  
+  <p>
+    The <a href="http://spdxhub.ist.unomaha.edu/">SPDX Dashboard</a> will serve as the central                              repository for SPDX documents, facilitating uploads, retrieval, modification, and sharing of SPDX
+    documents. The goal of the Product History Utility (PHU) is to enable a company to create a
+    relationships between the SPDX documents and the products that contain those licenses.
+    The Product History Utility will be created as a component of the SPDX Dashboard. Having the
+    Product History Utility  as a part of the SPDX Dashboard will remove the headache of
+    maintaining two separate databases of license documentation, and hopefully make the entire
+    toolset more usable.
+  </p>
+  
+  <p>
+    The SPDX Product History Utility will create a relationship between a company’s products, such as televisions or
+    computers, and the software packages that apply to them. This will allow the Product History
+    Utility to establish relationships between revisions of software, thereby allowing for report
+    generation of license changes to products and packages over time.
+  </p>
+  
+  <p>
+    One of the requirements of companies that distribute licensed software is to notify the consumer
+    of any license changes that may occur to their products. The PHU will provide a simple solution,
+    by generating QR codes that will link the consumers back to the license change page and  can
+    be attached to the product at the time of sale. 
+  </p>
+</div>
+
+<h5>Current Version</h5>
+<a href="https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/ChangeLog.md">Version 1.0</a>
 
 <h5>License</h5>
-Source  Code: Apache 2.0
-Documentation: Creative Commmons BY-SA-3.0
+<ul>
+  <li>Source  Code: Apache 2.0</li>
+  <li>Documentation: Creative Commmons BY-SA-3.0</li>
+</ul>
 
 <h5>Copyright</h5>
 copyright © 2014 David Le, Nick Boeckman, Zachary McFarland
 
 <h5>Technical Specifications</h5>
-Processor: 4 Ghz
-OS: Ubuntu 12.04 LTS
-Dependencies: Apache, mySql
-Memory: 16 Gb
+<ul>
+  <li>Processor: 4 Ghz</li>
+  <li>OS: Ubuntu 12.04 LTS</li>
+  <li>Dependencies: Apache, mySql</li>
+  <li>Memory: 16 Gb</li>
+</ul>
 
 <h5>System Design</h5>
-<a href="https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Documentation/Dataflow%20Diagram%20and%20Decomposition/DataflowDiagram.pdf>https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Documentation/Dataflow%20Diagram%20and%20Decomposition/DataflowDiagram.pdf</a>
+<a href="https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Documentation/Dataflow%20Diagram%20and%20Decomposition/DataflowDiagram.pdf">Data Flow Diagram</a>
 
 <h5>Installation</h5>
+<ol>
+  <li>Install the <a href="">SPDX Dashboard</a></li>
+  <li>Copy the contents of the <a href="https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/src">src</a> folder into the dashboard install directory</li>
+</ol>
 
 <h5>Usage</h5>
 Screen shots: <a href="https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/img">https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/img</a>
