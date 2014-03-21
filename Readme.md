@@ -67,4 +67,4 @@ The PHU team can be contacted through the <a href="https://lists.spdx.org/mailma
 
 <h5>Code Management</h5>
 Contributions to the PHU will be decided by a community vote.
-Changes to SPDX tooling standards will be brought to an <a href="https://trello.com/b/IfA3oIhe/spdx­tools>"advisory boadr.</a>
+Changes to SPDX tooling standards will be brought to an <a href="https://trello.com/b/IfA3oIhe/spdx­tools">advisory board.</a>
