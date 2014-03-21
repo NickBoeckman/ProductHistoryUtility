@@ -1,8 +1,24 @@
+<SPDX-License-Identifier: Apache-2.0>
+<!--
+Copyright 2014 David Le, Nick Boeckman, and Zac McFarland
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 <?php
 	include("function/HeaderFooter.php");
 	include("function/products.php");
 	include("function/software.php");
-	incHeader('PHU | Products');
+	incHeader('PHU | Product');
 	
 	/* Params */
 	$product_id = $_GET['product_id'];
@@ -10,68 +26,66 @@
 	
 	/* --- Queries --- */
 	$qryProduct           = getProducts($product_id);
-	$qryChildProducts     = getProducts('',$product_id);
-	$qrySoftware          = getSoftware('',$product_id);
+	$qryChildProducts     = getChildProducts($product_id);
+	$qryProductSoftware   = getProductSoftware($product_id);
 	$qryChildSoftware     = getChildSoftware($product_id);
 	/* --- END: Queries --- */
 ?>
 <h1>
 	<a href="index.php">Products</a> > 
-	<?php $row = mysql_fetch_assoc($qryProduct); echo $row[product_name];?>
+	<?php echo $qryProduct[0]['product_name'];?>
 </h1>
+<style>
+	.blue {
+    	color: #2E64FE;
+	}	
+</style>
 <hr>
 <div class="row-fluid">
-	<h3>Product Info</h3>
+	<div><h3 style="float:left;display:inline-block;">Product Info</h3><span style="float:right;display:inline-block;" class="glyphicon glyphicon-edit"></span></div>
 	<div class="span6">
 	    <table class="table table-bordered">
 	      <tbody>
 	      	<?php
 		        echo '<tr>';
 		        echo 	'<td class="tr-title">Product Name</td>';
-		        echo  '<td>' . $row[product_name] . '</td>';
+		        echo  '<td>' . $qryProduct[0]['product_name'] . '</td>';
 		        echo '</tr>';
 		        echo '<tr>';
 		        echo 	'<td class="tr-title">Product Type</td>';
-		        echo  '<td>' . $row[product_type] . '</td>';
+		        echo  '<td>' . $qryProduct[0]['product_type'] . '</td>';
 		        echo '</tr>';
 				echo '<tr>';
 		        echo 	'<td class="tr-title">Created At</td>';
-		        echo  '<td>' . date("M d, Y", strtotime($row[created_at])) . '</td>';
+		        echo  '<td>' . date("M d, Y", strtotime($qryProduct[0]['created_at'])) . '</td>';
 		        echo '</tr>';
 		        echo '<tr>';
 		        echo 	'<td class="tr-title">Updated At</td>';
-		        echo  '<td>' . date("M d, Y", strtotime($row[updated_at])) . '</td>';
+		        echo  '<td>' . date("M d, Y", strtotime($qryProduct[0]['updated_at'])) . '</td>';
 		        echo '</tr>';
 				echo '<tr>';
 		        echo 	'<td class="tr-title">Software</td>';
-		        echo  '<td><a href=view_product_software.php?product_id=' . $product_id .'>' . (mysql_num_rows($qrySoftware) + mysql_num_rows($qryChildSoftware)) . ' Records</a></td>';
+		        echo  '<td><a href=view_product_software.php?product_id=' . $product_id .'>' . (sizeof($qryProductSoftware) + sizeof($qryChildSoftware)) . ' Records</a></td>';
 		        echo '</tr>';
 				echo '<tr>';
 		        echo 	'<td class="tr-title">Child Products</td>';
-		        echo  '<td><a href="view_child_products.php?product_id=' .$product_id . '">' . mysql_num_rows($qryChildProducts) . ' Records</a></td>';
+		        echo  '<td><a href="view_child_products.php?product_id=' .$product_id . '">' . sizeof($qryChildProducts) . ' Records</a></td>';
 		        echo '</tr>';
 				echo '<tr>';
 		        echo 	'<td class="tr-title">Product Description</td>';
-		        echo  '<td>' . $row[product_description] . '</td>';
+		        echo  '<td>' . $qryProduct[0]['product_description'] . '</td>';
+		        echo '</tr>';
+				echo '<tr>';
+		        echo 	'<td class="tr-title">Product QR Code</td>';
+		        echo  '<td><a href="/SPDX/phu/qr.php?product_id=' . $product_id . '">View Code</a></td>';
 		        echo '</tr>';
 		     ?>
 	      </tbody>
 	    </table>
-	  </div>
-	  <div class="span5">
-	  	<ul class="nav nav-tabs nav-stacked">
-	  		<li>
-	  			<a href="javascript:void(0);">Comments (0)</a>
-	  		</li>
-	  	</ul>
-	  	<form accept-charset="UTF-8" action="/packages/10/comments" class="new_comment" id="new_comment" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="2/QYfHWi+P0Y21VCDCY7mSIzExCJPRpH8WsffQ8TgGw=" /></div>
-			<div class="input-append">
-		    	<input class="span10" disabled="disabled" id="comment_content" name="comment[content]" placeholder="Comment on this package" size="30" type="text" />
-		    	<input class="btn btn-primary" disabled="disabled" name="commit" type="submit" value="Add comment" />
-		    </div>
-		</form>  
-	  </div>
+	</div>
 </div>
 <?php
 	incFooter();
 ?>
+
+

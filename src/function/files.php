@@ -16,31 +16,27 @@
 	See the License for the specific language governing permissions and
 	limitations under the License. */
 	
-	function getPackages($package_id = "",$software_id = "",$product_id = "",$filter = false)
+	function getFiles($file_id = "", $filter = false)
 	{
-		$package_id  = mysql_real_escape_string($package_id);
-		$software_id = mysql_real_escape_string($software_id);
-		$product_id  = mysql_real_escape_string($product_id);
+		$file_id  = mysql_real_escape_string($file_id);
 
-		$serviceurl = "http://54.218.86.78:3000/api/packages";
+		$serviceurl = "http://54.218.86.78:3000/api/package_files";
 		
-		if(!empty($package_id)) {
-			$serviceurl .= "/" . $package_id;
+		if(!empty($file_id)) {
+			$serviceurl .= "/" . $file_id;
 		}				   
 		$data = json_decode(file_get_contents($serviceurl), true);
 		
 		return $data;
 	}
-	function getSoftwarePackages($software_id = "")
+	function getPackageFiles($package_id = "")
 	{
 		$package_id  = mysql_real_escape_string($package_id);
-		$software_id = mysql_real_escape_string($software_id);
-		$product_id  = mysql_real_escape_string($product_id);
-
-		$serviceurl = "http://54.218.86.78:3000/api/software_packages";
 		
-		if(!empty($software_id) && !$filter) {
-			$serviceurl .= "/" . $software_id;
+		$serviceurl = "http://54.218.86.78:3000/api/doc_file_package_associations";
+		
+		if(!empty($package_id) && !$filter) {
+			$serviceurl .= "/?package_id=" . $package_id;
 		}				   
 		$data = json_decode(file_get_contents($serviceurl), true);
 		

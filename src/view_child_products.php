@@ -1,3 +1,20 @@
+<SPDX-License-Identifier: Apache-2.0>
+<!--
+Copyright 2014 David Le, Nick Boeckman, & Zac McFarland
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
 <?php
 	include("function/HeaderFooter.php");
 	include("function/products.php");
@@ -10,17 +27,14 @@
 	
 	/* --- Queries --- */
 	$qryProduct       = getProducts($product_id);
-	$qryChildProducts = getProducts('',$product_id);
-	$qrySoftware      = getSoftware('',$product_id);
+	$qryChildProducts = getChildProducts($product_id);
 	/* --- END: Queries --- */
 ?>
 <h2>
 	<a href="index.php">Products</a> > 
-	<?php if(mysql_numrows($qryProduct) == 1) {
-		  	 $row = mysql_fetch_assoc($qryProduct); 
-		  	 echo '<a href="view_product.php?product_id=' . $product_id . '">' . $row[product_name] . '</a> > ';
+	<?php if(sizeof($qryProduct) == 1) {
+		  	 echo '<a href="view_product.php?product_id=' . $product_id . '">' . $qryProduct[0]['product_name'] . '</a> > ';
 		  }
-		  
 	?>
 	Child Products
 </h2>
@@ -37,14 +51,14 @@
 			</thead>
 			<tbody>
        		 		<?php
-						if(mysql_num_rows($qryChildProducts) > 0) {
-							while($row = mysql_fetch_assoc($qryChildProducts))
+						if(sizeof($qryChildProducts) > 0) {
+							foreach($qryChildProducts as $row)
 							{
-						  		echo '<tr title="' . $row[product_description] . '">';
-								echo 	'<td><a href="view_product.php?product_id=' . $row[product_id] . '">' . $row[product_name] . '</a></td>';
-								echo    '<td>' . $row[product_type] . '</td>';
-								echo    '<td>' . date("M d, Y", strtotime($row[created_at])) . '</td>';
-								echo    '<td>' . date("M d, Y", strtotime($row[updated_at])) . '</td>';
+						  		echo '<tr title="' . $row['product_description'] . '">';
+								echo 	'<td><a href="view_product.php?product_id=' . $row['product_id'] . '">' . $row['product_name'] . '</a></td>';
+								echo    '<td>' . $row['product_type'] . '</td>';
+								echo    '<td>' . date("M d, Y", strtotime($row['created_at'])) . '</td>';
+								echo    '<td>' . date("M d, Y", strtotime($row['updated_at'])) . '</td>';
 								echo '</tr>';
 							}
 						}
@@ -64,3 +78,5 @@
 <?php
 	incFooter();
 ?>
+
+

@@ -19,11 +19,13 @@ limitations under the License.
 	include("function/products.php");
 	include("function/packages.php");
 	include("function/software.php");
-	incHeader('PHU | Packages');
+	include("functon/compare.php");
+	incHeader('PHU | Package Comparison');
 	
 	/* Params */
 	$product_id = $_GET['product_id'];
 	$software_id = $_GET['software_id'];
+	$package_ids = $_GET['package_ids'];
 	$difCounter  = 1;
 	/* END: Params */
 	
@@ -31,6 +33,7 @@ limitations under the License.
 	$qryProduct       = getProducts($product_id);
 	$qrySoftware      = getSoftware($software_id);
 	$qryPackages      = getSoftwarePackages($software_id);
+	$packageParams    = comparePackages($package_ids);
 	/* --- END: Queries --- */
 ?>
 <style>
@@ -55,7 +58,7 @@ limitations under the License.
 </script>
 
 <h3>
-	<a href="index.php">Products</a> > 
+	<a href="index.php">Package Comparison</a> > 
 	<?php 
 		  if(sizeof($qryProduct) == 1) {
 		  	 echo '<a href="view_product.php?product_id=' . $product_id . '">' . $qryProduct[0]['product_name'] . '</a> > <a href="view_product_software.php?product_id=' . $product_id . '&software_id=' . $software_id. '">Product Software</a> > ';
@@ -64,48 +67,58 @@ limitations under the License.
 		  	 echo '<a href="view_software.php?software_id=' . $software_id . '&product_id=' . $product_id . '">' . $qrySoftware[0]['software_name'] . '</a> > ';
 		  }
 	?>
-	Packages
+	Package Comparison
 </h3>
 <div class="row-fluid">
-	<h3>Software Packages</h3>
+	<h3>Package Comparison</h3>
 	<div class="span11" style="width: 90%; margin-top:20px;" align="center">
 		<table class="table table-bordered"> 
 			<thead>
 				<tr>
-					<th>Select</th>
-					<th>Package Name</th>
-					<th>Version</th>
-					<th>Created At</th>
-					<th>Last Updated At</th>
+					<th>Attribute</th>
+					<?php
+						foreach ($pacakgeParams as $row) {
+							echo '<th>' . $row['package_name'] . '</th>';
+						}
+					?>
+					<th>Status</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php
-					if(sizeof($qryPackages) > 0) {
-						foreach($qryPackages as $row)
-						{
-					  		echo '<tr title="' . $row['package_name'] . '">';
-					  		echo    '<td style="text-align:center;"><input type="checkbox" class="compCheckbox" id="' . $row['package_id'] . '"/></td>';
-							echo 	'<td><a href="' . $row['package_home_page'] . '">' . $row['package_name'] . '</a></td>';
-							echo    '<td>' . $row['package_version'] . '</td>';
-							echo 	'<td>' . date("M d, Y", strtotime($row['created_at'])) . '</td>';
-							echo    '<td>' . date("M d, Y", strtotime($row['updated_at'])) . '</td>';
-							echo '</tr>';
+					if(sizeof($packageParams) > 1) {
+						foreach ($pacakgeParams[0] as $key => $value) {
+							if ($key != "files") {
+								echo '<tr title="' . $key . '">';
+								echo    '<td style="text-align:center;">' . $key . '</td>';
+								
+								foreach($packageParams as $row) {
+							  		echo '<td>' . $row[$key] . '</td>';
+								}
+								echo 	'<td>' . $packageParams["result"][$key] .'</td>';
+								echo '</tr>';
+							} else {
+								foreach ($key["files"] as $fileName => $values) {
+									foreach ($values as $param) {
+										echo '<tr title="' . $fileName . '/">';
+										echo 	'<td style="text-align:center;">' . $fileName . '/' . $param . '</td>';
+										foreach ($packageParams as $row) {
+											echo '<td>' . $row["files"][$fileName][$param] . '</td>';
+										}
+										echo 	'<td>' . $packageParams["result"]["files"][$fileName] . '</td>';
+										echo '</tr>';
+									}
+								}
+							}
 						}
 					}
 					else {
-						echo '<tr><td colspan="5">This software does not have any packages. <a href="add_software_package.php?product_id=' . $product_id . '&software=' . $software .'">Add Package</a> to software.</td></tr>';
+						echo '<tr><td colspan="500">Not enough packages supplied for valid comparison.</td></tr>';
 					}			
 				?>
 			</tbody>					
 		</table>				
 	</div>
-</div>
-<div align="center">
-	<p>
-		<a href="add_software_package.php?software_id=<?php echo $software_id . '&product_id=' . $product_id; ?>">Add Package</a>
-		 to this software.
-	</p>
 </div>
 <?php
 	incFooter();

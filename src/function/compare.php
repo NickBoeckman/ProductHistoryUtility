@@ -62,7 +62,7 @@ function comparePackages($packageIds){
  * Returns:     The results of all file comparisons.
  * Description: Compares the information at item level between multiple separate packages. This function is called by the comparePackages function.
  */
-function compareItems($packageParams, $numPackages) {
+function compareFiles($packageParams, $numPackages) {
     $parameterList = array (    /*file_name not included because the array is sorted by file_name*/
                             "file_type", "file_copyright_text", "license_info_in_file", "license_concluded",
                             "file_checksum", "file_checksum_algorithm", "relative_path", "license_comments",
