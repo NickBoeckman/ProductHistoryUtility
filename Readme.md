@@ -9,7 +9,7 @@ The Software Package Data Exchange (SPDX) specification is a formatting standard
 </p>
 
 <p>
-The <a href="htt[://spdxhub.ist.unomaha.edu/">SPDX Dashboard</a> will serve as the central repository for SPDX documents, facilitating uploads, retrieval, modification, and sharing of SPDX documents. THe goal of the Product History Utility (PHU) is to enable a company to create relationships between the SPDX documents and the products that contain those licenses. The PHU wil be created as a component of the SPDX Dashboard. Having the PHU as a part of the SPDX Dashboard will remove the need for maintaining separate databases of license documentation, and increase the overall SPDX toolset.
+The <a href="https://github.com/joerter/spdx-dashboard">SPDX Dashboard</a> will serve as the central repository for SPDX documents, facilitating uploads, retrieval, modification, and sharing of SPDX documents. THe goal of the Product History Utility (PHU) is to enable a company to create relationships between the SPDX documents and the products that contain those licenses. The PHU wil be created as a component of the SPDX Dashboard. Having the PHU as a part of the SPDX Dashboard will remove the need for maintaining separate databases of license documentation, and increase the overall SPDX toolset.
 </p>
 
 <p>
@@ -38,7 +38,7 @@ copyright © 2014 David Le, Nick Boeckman, Zachary McFarland
 <ul>
   <li>Processor: 4 Ghz</li>
   <li>OS: Ubuntu 12.04 LTS</li>
-  <li>Dependencies: Apache, mySql</li>
+  <li>Dependencies: Pre-existing instance of the <a href="https://github.com/joerter/spdx-dashboard">SPDX Dashboard</a></li>
   <li>Memory: 16 Gb</li>
 </ul>
 
@@ -49,7 +49,7 @@ copyright © 2014 David Le, Nick Boeckman, Zachary McFarland
 
 <h5>Installation</h5>
 <ol>
-  <li>Install the <a href="">SPDX Dashboard</a></li>
+  <li>Install the <a href="https://github.com/joerter/spdx-dashboard">SPDX Dashboard</a></li>
   <li>Copy the contents of the <a href="https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/src">src</a> folder into the dashboard install directory</li>
 </ol>
 
@@ -63,8 +63,9 @@ copyright © 2014 David Le, Nick Boeckman, Zachary McFarland
 SPDX OSS Community
 
 <h5>Communication</h5>
-The PHU team can be contacted through the <a href="https://lists.spdx.org/mailman/listinfo/spdx-tech">SPDX-Tech mailing list.</a>
+<p>The Product History Utility team can be contacted through the <a href="https://lists.spdx.org/mailman/listinfo/spdx-tech">SPDX-Tech mailing list.</a></p>
 
 <h5>Code Management</h5>
-Contributions to the PHU will be decided by a community vote.
-Changes to SPDX tooling standards will be brought to an <a href="https://trello.com/b/IfA3oIhe/spdx­tools">advisory board.</a>
+<p>Contributions to the PHU will be decided by a community vote.</p>
+<p>Changes to SPDX tooling standards will be brought to an <a href="https://trello.com/b/IfA3oIhe/spdx­tools">advisory board.</a></p>
+<p>Any bugs or vulnrabilites can be reported to the <a href="https://github.com/zwmcfarland/ProductHistoryUtility/issues?state=open">ProductHistoryUtility</a>'s repo</p>
