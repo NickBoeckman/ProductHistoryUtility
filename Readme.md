@@ -20,6 +20,9 @@ The PHU will create a relationship between a company's products, such as televis
 One of the requirements of companies that distribute licensed software is to notify the consumer of any license changes that may occur to their products. The PHU will provide a simple solution: generated QR codes that are attached to the product at the time of sale will link the consumer back to the license change page.
 </p>
 
+<a href="https://docs.google.com/presentation/d/1bs32p6kAmZG2qL2DRdGoJMVAzQpfUpN5Sz5ngCEJAJs/pub?start=false&loop=false&delayms=3000">Brief Presentation</a>
+<br>
+
 </div>
 
 <h5>Current Version</h5>
@@ -68,4 +71,4 @@ SPDX OSS Community
 <h5>Code Management</h5>
 <p>Contributions to the PHU will be decided by a community vote.</p>
 <p>Changes to SPDX tooling standards will be brought to an <a href="https://trello.com/b/IfA3oIhe/spdx­tools">advisory board.</a></p>
-<p>Any bugs or vulnrabilites can be reported to the <a href="https://github.com/zwmcfarland/ProductHistoryUtility/issues?state=open">ProductHistoryUtility</a>'s repo</p>
+<p>Any bugs or vulnerabilites can be reported to the <a href="https://github.com/zwmcfarland/ProductHistoryUtility/issues?state=open">ProductHistoryUtility</a>'s repo.</p>
