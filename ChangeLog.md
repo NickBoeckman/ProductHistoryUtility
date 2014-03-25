@@ -17,6 +17,11 @@ Change Log
           <li>Add Packages to Software</li>
         </ul>
       </li>
+      <li>Compare
+        <ul>
+          <li>Compare Package Level Information between Different Packages</li>
+        </ul>
+      </li>
       <li>Generate Product QR Codes</li>
     </ul>
   <h4>Documentation</h4>
