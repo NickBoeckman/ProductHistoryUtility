@@ -8,17 +8,15 @@ Change Log
         <ul>
           <li>Add Products</li>
           <li>View Products</li>
-          <li>Edit Products</li>
         </ul
       </li>
       <li>Software
         <ul>
           <li>Add Software</li>
           <li>View Software</li>
-          <li>Edit Software</li>
+          <li>Add Packages to Software</li>
         </ul>
       </li>
-      <li>Add Packages to Software</li>
       <li>Generate Product QR Codes</li>
     </ul>
   <h4>Documentation</h4>
