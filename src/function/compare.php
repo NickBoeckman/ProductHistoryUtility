@@ -28,6 +28,9 @@ function comparePackages($packageIds){
     //These are all the parameters we need to store information about.
     $pacakgeInfo = array();
     $numPackages = 0;
+    if (!is_array($packageIds)) {
+	$packageIds = array($pacakgeIds);
+    }
     foreach ($packageIds as $packageId) {
         $pacakgeParams[] = getPackageParams($packageId); //Populate a list of all the needed package parameters.
         $numPackages++;

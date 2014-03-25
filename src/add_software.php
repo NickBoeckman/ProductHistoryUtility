@@ -17,8 +17,9 @@ limitations under the License.
 <?php
 	include("function/HeaderFooter.php");
 	include("function/products.php");
+	include("function/software.php");
 	include("function/packages.php");
-	incHeader('PHU | Add Software','','http://' . $_SERVER['SERVER_NAME'] .'/SPDX/phu/js/form.js');
+	incHeader('PHU | Add Software');
 	
 	/* --- Params ---*/
 	$product_id = $_GET['product_id'];
@@ -26,6 +27,7 @@ limitations under the License.
 	
 	/* --- Queries --- */
 	$qryProduct  = getProducts($product_id);
+	$softid      = getSoftwareAuto();
 	$qryPackages = getPackages();
 	/* --- END: Queries --- */
 	
@@ -33,23 +35,60 @@ limitations under the License.
 	$cancelLocation = "view_product_software.php?product_id=" . $product_id;
 	/* --- END: Set return location for cancel button --- */
 ?>
+<script>
+	$(document).on('click','.sub',function() {
+		if($('#softwareName').val() == '')
+		{
+			alert('Must Enter a software name');
+		}
+		else if($('#softwareDescription').val() == '')
+		{
+			alert('Must Enter a software description');;
+		}
+		else
+		{
+			var data = "software_name=" + $('#softwareName').val() + "&software_version=" + $('#selPackage option:selected').attr('id') + "&software_descrption=" + $('#softwareDescription').val();
+			
+			$.ajax({
+			  type: "POST",
+			  async: false,
+			  url: "http://spdxdev.ist.unomaha.edu:3000/api/insert_software?" + data,		  
+			  success: function (result)
+			  {
+			  		data = "software_id=<?php echo $softid[0]['Auto_increment'];?>&product_id=<?echo $product_id;?>&package_id=" + $('#selPackage').val();
+			
+					$.ajax({
+					  type: "POST",
+					  async: false,
+					  url: "http://spdxdev.ist.unomaha.edu:3000/api/insert_product_software?" + data,		  
+					  success: function (result)
+					  {
+					  		alert('Successfully added software');
+					  },
+					  error: function(result)
+					  {
+					  	alert('Error adding software');
+					  }
+					});
+			  },
+			  error: function(result)
+			  {
+			  	alert('Error adding software');
+			  }
+			});
+		}
+	});
+</script>
 <h3>
 	<a href="index.php">Products</a> > 
 	<?php if(sizeof($qryProduct) == 1) {
 		  	 echo '<a href="view_product.php?product_id=' . $product_id . '">' . $qryProduct[0][product_name] . '</a> > <a href="view_product_software.php?product_id=' . $product_id . '">Product Software</a> > ';
 		  }
-		  
 	?>
 	Add Software
 </h3>
 <div class="row-fluid">
-	<form style="margin-left:50px;" action="add_software_action.php" method="post" enctype="multipart/form-data" id="addForm" target="formSubFrame" onsubmit="formSubmit()" role="form">
-		<div id="formSubmission" style="display:none;">
-			<p>
-				<img src="img/ajax-loader-circles.gif" height="20px" width="20px"></img>
-				Submiting form, please wait...
-			</p>
-		</div> 	
+	 <form style="margin-left:50px;" method="post" enctype="multipart/form-data" id="addForm" target="formSubFrame" onsubmit="formSubmit()" role="form">
 		<div class="form-group">	
 			<label for="softwareName">Software Name</label>
 			<input type="text" placeholder="Software #1..." name="software_name" style="width: 300px;" id="softwareName" class="form-control">  
@@ -60,7 +99,7 @@ limitations under the License.
 				<?php 
 					foreach($qryPackages as $row)
 					{
-						echo '<option value="' . $row['id'] . '">' . $row['package_name'] . '</option>';
+						echo '<option value="' . $row['id'] . '" id="' . $row['package_version'] . '" >' . $row['package_name'] . '</option>';
 					}
 				?>
 			</select>
@@ -71,12 +110,10 @@ limitations under the License.
 		</div>			
 		<input type="hidden" name="product_id" value="<?php echo $product_id; ?>">	
 		<div style="margin-top:5px;">
-			<button type="submit" class="btn">Submit</button>
+			<button type="button" class="btn sub">Submit</button>
 			<button type="button" class="btn" onclick="window.location.href='<?php echo $cancelLocation; ?>'">Cancel</button>
 		</div>
 	</form>
-	<iframe name="formSubFrame" style="display:none;" id="iframSub" onload="subComp()">
-	</iframe>
 </div>
 <?php
 	incFooter();

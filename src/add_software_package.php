@@ -29,33 +29,45 @@ limitations under the License.
 	/* --- Queries --- */
 	$qryProduct  = getProducts($product_id);
 	$qrySoftware = getSoftware($software_id);
-	$qryPackages = getPackages($product_id);
+	$qryPackages = getNonProductPackages($product_id);
 	/* --- END: Queries --- */
 	
 	/* --- Set return location for canel button --- */
 	$cancelLocation = "view_packages.php?product_id=" . $product_id . '&software_id=' . $software_id;
 	/* --- END: Set return location for canel button --- */
 ?>
-
+<script>
+	$(document).on('click','.sub',function() {
+		var data = "software_id=<?php echo $software_id;?>&product_id=<?echo $product_id;?>&package_id=" + $('#selPackage').val();
+			
+		$.ajax({
+		  type: "POST",
+		  async: false,
+		  url: "http://spdxdev.ist.unomaha.edu:3000/api/insert_product_software?" + data,		  
+		  success: function (result)
+		  {
+		  		alert('Successfully added package to software');
+		  },
+		  error: function(result)
+		  {
+		  	alert('Error adding package to software');
+		  }
+		});
+	});
+</script>
 <h4>
 	<a href="index.php">Products</a> > 
 	<?php 
 		  	 echo '<a href="view_product.php?product_id=' . $product_id . '">' . $qryProduct[0]['product_name'] . '</a> > '; 
 		  	 echo '<a href="view_product_software.php?product_id=' . $product_id . '">Product Software</a> > ';
-		  	 echo '<a href="view_software.php?product_id=' . $product_id . '&software_id=' . $software_id . '">' . $qrySoftware[0][software_name] . '</a> > ';
+		  	 echo '<a href="view_software.php?product_id=' . $product_id . '&software_id=' . $software_id . '">' . $qrySoftware[0]['software_name'] . '</a> > ';
 		  	 echo '<a href="view_packages.php?product_id=' . $product_id . '&software_id=' . $software_id . '">Packages</a> > ';
 	?>
 	Add Package
 </h4>
 <div class="row-fluid">
 	<hr>
-	<form style="margin-left:50px;" action="add_software_package_action.php" method="post" enctype="multipart/form-data" id="addForm" target="formSubFrame" onsubmit="formSubmit()" role="form">
-		<div id="formSubmission" style="display:none;">
-			<p>
-				<img src="img/ajax-loader-circles.gif" height="20px" width="20px"></img>
-				Submiting form, please wait...
-			</p>
-		</div> 			
+	<form style="margin-left:50px;" method="post" enctype="multipart/form-data" id="addForm" target="formSubFrame" onsubmit="formSubmit()" role="form">		
 		<div class="form-group">
 			<?php 	     				
 				if(sizeof($qryPackages) > 0) {
@@ -63,13 +75,13 @@ limitations under the License.
 					echo '<select name="package_id" id="selPackage" style="width:300px !important;" class="form-control">';
 						foreach($qryPackages as $row)
 						{
-							echo '<option value="' . $row[package_id] . '">' . $row[package_name] . '</option>';
+							echo '<option value="' . $row['id'] . '">' . $row['package_name'] . '</option>';
 						}
 					echo '</select>';
 					echo '<input type="hidden" name="product_id"  value="'. $product_id . '">';
 					echo '<input type="hidden" name="software_id" value="' .$software_id . '">';		
 					echo '<div style="margin-top:10px;">';
-					echo 	'<button type="submit" class="btn" style="margin-right:5px;">Submit</button>';
+					echo 	'<button type="button" class="btn sub" style="margin-right:5px;">Submit</button>';
 					echo 	'<button type="button" class="btn" onclick="window.location.href=\''. $cancelLocation .'\'">Cancel</button>';
 					echo '</div>';	
 				}
@@ -80,8 +92,6 @@ limitations under the License.
 			?>
 		</div>
 	</form>
-	<iframe name="formSubFrame" style="display:none;" id="iframSub" onload="subComp()">
-	</iframe>
 </div>
 <?php
 	incFooter();

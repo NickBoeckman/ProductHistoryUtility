@@ -20,7 +20,7 @@
 	{
 		$file_id  = mysql_real_escape_string($file_id);
 
-		$serviceurl = "http://54.218.86.78:3000/api/package_files";
+		$serviceurl = "http://" . $_SERVER['SERVER_NAME'] . ":3000/api/package_files";
 		
 		if(!empty($file_id)) {
 			$serviceurl .= "/" . $file_id;
@@ -33,10 +33,10 @@
 	{
 		$package_id  = mysql_real_escape_string($package_id);
 		
-		$serviceurl = "http://54.218.86.78:3000/api/doc_file_package_associations";
+		$serviceurl = "http://" . $_SERVER['SERVER_NAME'] . ":3000/api/doc_file_package_associations";
 		
-		if(!empty($package_id) && !$filter) {
-			$serviceurl .= "/?package_id=" . $package_id;
+		if(!empty($package_id)) {
+			$serviceurl .= "/$package_id";
 		}				   
 		$data = json_decode(file_get_contents($serviceurl), true);
 		

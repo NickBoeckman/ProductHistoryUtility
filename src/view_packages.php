@@ -39,21 +39,6 @@ limitations under the License.
 		margin-right: 5px;
 	}
 </style>
-
-<script>
-	$(document).on('click','.sectionLink', function() {
-		$('.' + $(this).attr('id')).goTo();
-	});
-	(function($) {
-    	$.fn.goTo = function() {
-	        $('html').animate({
-	            scrollTop: $(this).offset().top + 'px'
-	        }, 'fast');
-	        return this; // for chaining...
-	    }
-	})(jQuery);
-</script>
-
 <h3>
 	<a href="index.php">Products</a> > 
 	<?php 
@@ -69,36 +54,45 @@ limitations under the License.
 <div class="row-fluid">
 	<h3>Software Packages</h3>
 	<div class="span11" style="width: 90%; margin-top:20px;" align="center">
-		<table class="table table-bordered"> 
-			<thead>
-				<tr>
-					<th>Select</th>
-					<th>Package Name</th>
-					<th>Version</th>
-					<th>Created At</th>
-					<th>Last Updated At</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-					if(sizeof($qryPackages) > 0) {
-						foreach($qryPackages as $row)
-						{
-					  		echo '<tr title="' . $row['package_name'] . '">';
-					  		echo    '<td style="text-align:center;"><input type="checkbox" class="compCheckbox" id="' . $row['package_id'] . '"/></td>';
-							echo 	'<td><a href="' . $row['package_home_page'] . '">' . $row['package_name'] . '</a></td>';
-							echo    '<td>' . $row['package_version'] . '</td>';
-							echo 	'<td>' . date("M d, Y", strtotime($row['created_at'])) . '</td>';
-							echo    '<td>' . date("M d, Y", strtotime($row['updated_at'])) . '</td>';
-							echo '</tr>';
+		<form action="compare.php">
+			<table class="table table-bordered"> 
+				<thead>
+					<tr>
+						<th>Select</th>
+						<th>Package Name</th>
+						<th>Version</th>
+						<th>Created At</th>
+						<th>Last Updated At</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+						if(sizeof($qryPackages) > 0) {
+							foreach($qryPackages as $row)
+							{
+						  		echo '<tr title="' . $row['package_name'] . '">';
+						  		echo    '<td style="text-align:center;"><input type="checkbox" class="compCheckbox" id="' . $row['id'] . '" name="package_id" value="' . $row['id'] . '" /></td>';
+								echo 	'<td><a href="' . $row['package_home_page'] . '">' . $row['package_name'] . '</a></td>';
+								echo    '<td>' . $row['package_version'] . '</td>';
+								echo 	'<td>' . date("M d, Y", strtotime($row['created_at'])) . '</td>';
+								echo    '<td>' . date("M d, Y", strtotime($row['updated_at'])) . '</td>';
+								echo '</tr>';
+							}
 						}
-					}
-					else {
-						echo '<tr><td colspan="5">This software does not have any packages. <a href="add_software_package.php?product_id=' . $product_id . '&software=' . $software .'">Add Package</a> to software.</td></tr>';
-					}			
-				?>
-			</tbody>					
-		</table>				
+						else {
+							echo '<tr><td colspan="5">This software does not have any packages. <a href="add_software_package.php?product_id=' . $product_id . '&software=' . $software .'">Add Package</a> to software.</td></tr>';
+						}			
+					?>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="5" style="text-align:center;">
+							<button type="submit" id="submitForm" style="margin-left:40px;">Compare</button>
+						</td>
+					</tr>
+				</tfoot>					
+			</table>
+		</form>				
 	</div>
 </div>
 <div align="center">

@@ -45,6 +45,15 @@
 		return $data;
 	}
 	
+	function getSoftwareAuto()
+	{
+		$serviceurl = "http://" . $_SERVER['SERVER_NAME'] . ":3000/api/software_auto";   
+		
+		$data = json_decode(file_get_contents($serviceurl), true);
+		
+		return $data;
+	}
+	
 	function getChildSoftware($parent_product_id = "")
 	{
 		$parent_product_id = mysql_real_escape_string($parent_product_id);
@@ -57,47 +66,6 @@
 		$data = json_decode(file_get_contents($serviceurl), true);
 		
 		return $data;
-	}
-	
-	function insertSoftware($software_name = "", $software_version = "", $software_description = "")
-	{
-		include("Data_Source.php");
-		mysql_connect("$host", "$username", "$password")or die("cannot connect server " . mysql_error());
-		mysql_select_db("$db_name")or die("cannot select DB " . mysql_error());
-		
-		$qrySoftwareId = mysql_query("SHOW TABLE STATUS LIKE 'software'");
-		$softwareIdRow = mysql_fetch_array($qrySoftwareId);
-		$softwareId = $softwareIdRow['Auto_increment'];
-						
-		$sql = "INSERT INTO software (software_name,software_version,software_description,created_at,updated_at)
-				VALUES ('$software_name','$software_version','$software_description',NOW(),NOW())";
-				
-		
-		$insSoftware = mysql_query($sql);
-		if(!empty($insSoftware) && $insSoftware != 'true')
-		{
-			mysql_close();
-			return $insSoftware;
-		}
-		else {
-			mysql_close();
-			return $softwareId;	
-		}
-	}
-	function updateSoftware($software_id)
-	{
-		include("Data_Source.php");
-		mysql_connect("$host", "$username", "$password")or die("cannot connect server " . mysql_error());
-		mysql_select_db("$db_name")or die("cannot select DB " . mysql_error());
-		
-						
-		$sql = "UPDATE products SET updated_at = NOW() WHERE id = $software_id";
-				
-		
-		$updSoftware = mysql_query($sql);
-		
-		mysql_close();
-		return $updSoftware;
 	}
 
 ?>

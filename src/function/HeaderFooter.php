@@ -25,9 +25,15 @@
 					    <meta charset="utf-8">
 					    <title>'. $title .'</title>
 					    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-					    <link href="/SPDX/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-						<script src="/SPDX/bower_components/jquery/jquery.js"></script>
-						<script src="/SPDX/phu/js/bootstrap.js"></script>';
+					    <meta http-equiv="cache-control" content="max-age=0" />
+						<meta http-equiv="cache-control" content="no-cache" />
+						<meta http-equiv="expires" content="0" />
+						<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+						<meta http-equiv="pragma" content="no-cache" />
+					    <link  href="http://' . $_SERVER['SERVER_NAME'] .'/ProductHistoryUtility/img/uno.ico" rel="shortcut icon">
+					    <link href="/spdx-dashboard/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+						<script src="/spdx-dashboard/bower_components/jquery/jquery.js"></script>
+						<script src="/ProductHistoryUtility/js/bootstrap.js"></script>';
 		
 		//CSS Includes
 		foreach(explode(',',$CSS_Include) as $path)
@@ -65,9 +71,9 @@
 				            	<span class="icon-bar"></span>
 				            	<span class="icon-bar"></span>
 				          	</a>
-				            <a href="/SPDX/" class="navbar-brand">Home</a>
-					        <a href="/SPDX/phu/index.php" class="navbar-brand">Products</a>
-					        <a href="/SPDX/phu/add_product.php" class="navbar-brand">Add Product</a>
+				            <a href="/spdx-dashboard/src/" class="navbar-brand">Home</a>
+					        <a href="/ProductHistoryUtility/index.php" class="navbar-brand">Products</a>
+					        <a href="/ProductHistoryUtility/add_product.php" class="navbar-brand">Add Product</a>
 				            <div class="container-fluid nav-collapse">
 				            	<ul class="nav">
 				            	</ul>

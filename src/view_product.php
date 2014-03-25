@@ -40,11 +40,40 @@ limitations under the License.
     	color: #2E64FE;
 	}	
 </style>
+<script>
+	$(document).on('click','.edit',function() {
+		$('.edit').hide();
+		$('.edit_inputs').show();
+		$('.save').show();
+		$('.cancel').show();
+	});
+	$(document).on('click','.save',function() {
+		$('.save').hide();
+		$('.edit_inputs').hide();
+		$('.edit').show();
+		$('.cancel').hide();
+	});
+	$(document).on('click','.cancel',function() {
+		$('.edit').show();
+		$('.edit_inputs').hide();
+		$('.save').hide();
+		$('.cancel').hide();
+	});
+</script>
 <hr>
 <div class="row-fluid">
-	<div><h3 style="float:left;display:inline-block;">Product Info</h3><span style="float:right;display:inline-block;" class="glyphicon glyphicon-edit"></span></div>
 	<div class="span6">
 	    <table class="table table-bordered">
+	   	  <thead style="font-size: 2em;">
+	   	  	<tr>
+	   	  		<th colspan="2" style="vertical-align: bottom;">
+	   	  			Product Info
+	   	  			<span style="float:right;font-size: 40;" class="glyphicon glyphicon-edit edit" title="Edit"></span>
+	   	  			<span style="float:right;font-size: 40;display: none;" class="glyphicon glyphicon-floppy-disk save" title="Save"></span>
+	   	  			<span style="float:right;font-size: 40;display: none;" class="glyphicon glyphicon-remove cancel" title="Cancel"></span>
+	   	  		</th>
+	   	  	</tr>
+	   	  </thead>
 	      <tbody>
 	      	<?php
 		        echo '<tr>';
@@ -77,7 +106,7 @@ limitations under the License.
 		        echo '</tr>';
 				echo '<tr>';
 		        echo 	'<td class="tr-title">Product QR Code</td>';
-		        echo  '<td><a href="/SPDX/phu/qr.php?product_id=' . $product_id . '">View Code</a></td>';
+		        echo  '<td><a href="/ProductHistoryUtility/qr.php?product_id=' . $product_id . '">View Code</a></td>';
 		        echo '</tr>';
 		     ?>
 	      </tbody>

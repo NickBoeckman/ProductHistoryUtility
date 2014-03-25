@@ -44,12 +44,19 @@ limitations under the License.
 							foreach($qryProducts as $row)
 							{
 								/*--- Get parent Products ---*/
-								if($row['parent_product_id'] != null)
-									$qryParentProducts = getProducts($row['parent_product_id']);	
+								if($row['parent_product_id'] != 0) {
+									$qryParentProducts = getProducts($row['parent_product_id']);
+								}	
+								
 						  		echo '<tr title="' . $row['product_description'] . '">';
 								echo 	'<td><a href="view_product.php?product_id=' . $row['id'] . '">' . $row['product_name'] . '</a></td>';
 								echo    '<td>' . $row['product_type'] . '</td>';
-								echo    '<td><a href="view_product.php?product_id=' . $row['parent_product_id'] . '">' .  $qryParentProducts[0]['product_name'] . '</a></td>';
+								if($row['parent_product_id'] != 0) {
+									echo    '<td><a href="view_product.php?product_id=' . $row['parent_product_id'] . '">' .  $qryParentProducts[0]['product_name'] . '</a></td>';
+								}
+								else {
+									echo '<td></td>';	
+								}
 								echo    '<td>' . date("M d, Y", strtotime($row['created_at'])) . '</td>';
 								echo    '<td>' . date("M d, Y", strtotime($row['created_at'])) . '</td>';
 								echo '</tr>';
