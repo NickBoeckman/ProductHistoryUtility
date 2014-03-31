@@ -53,7 +53,8 @@ copyright © 2014 David Le, Nick Boeckman, Zachary McFarland
 <h5>Installation</h5>
 <ol>
   <li>Install the <a href="https://github.com/joerter/spdx-dashboard">SPDX Dashboard</a></li>
-  <li>Copy the contents of the <a href="https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/src">src</a> folder into the dashboard install directory</li>
+  <li>Copy the contents of the <a href="https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/src">src</a> folder into your web hosted directory in a directory called ProductHistory Utility.</li>
+  <li>Depending on how you installed the SPDX Dashboard you may need to update the script and link sources in the Headerfooter.php file to point to the correct location.</li>
 </ol>
 
 <h5>Usage</h5>
