@@ -18,7 +18,7 @@
 	
 	function getFiles($file_id = "", $filter = false)
 	{
-		$file_id  = mysql_real_escape_string($file_id);
+		$file_id  = mysql_escape_string($file_id);
 
 		$serviceurl = "http://" . $_SERVER['SERVER_NAME'] . ":3000/api/package_files";
 		
@@ -31,7 +31,7 @@
 	}
 	function getPackageFiles($package_id = "")
 	{
-		$package_id  = mysql_real_escape_string($package_id);
+		$package_id  = mysql_escape_string($package_id);
 		
 		$serviceurl = "http://" . $_SERVER['SERVER_NAME'] . ":3000/api/doc_file_package_associations";
 		
