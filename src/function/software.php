@@ -17,8 +17,8 @@
 	limitations under the License. */
 	function getSoftware($software_id = "", $product_id = "")
 	{
-		$product_id 	   = mysql_real_escape_string($software_id);
-		$parent_product_id = mysql_real_escape_string($product_id);
+		$product_id 	   = mysql_escape_string($software_id);
+		$parent_product_id = mysql_escape_string($product_id);
 
 		$serviceurl = "http://" . $_SERVER['SERVER_NAME'] . ":3000/api/software";
 		
@@ -32,7 +32,7 @@
 	
 	function getProductSoftware($product_id = "")
 	{
-		$product_id = mysql_real_escape_string($product_id);
+		$product_id = mysql_escape_string($product_id);
 
 		$serviceurl = "http://" . $_SERVER['SERVER_NAME'] . ":3000/api/product_software";
 		
@@ -56,7 +56,7 @@
 	
 	function getChildSoftware($parent_product_id = "")
 	{
-		$parent_product_id = mysql_real_escape_string($parent_product_id);
+		$parent_product_id = mysql_escape_string($parent_product_id);
 
 		$serviceurl = "http://" . $_SERVER['SERVER_NAME'] . ":3000/api/child_software";
 		
