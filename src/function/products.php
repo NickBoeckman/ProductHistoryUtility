@@ -18,7 +18,7 @@
 	
 	function getProducts($product_id = "")
 	{	
-		$product_id = mysql_real_escape_string($product_id);
+		$product_id = mysql_escape_string($product_id);
 		$serviceurl = "http://" . $_SERVER['SERVER_NAME'] . ":3000/api/products";
 		
 		if(!empty($product_id) && $product_id != NULL) {
@@ -31,7 +31,7 @@
 	
 	function getChildProducts($product_id = "")
 	{	
-		$product_id = mysql_real_escape_string($product_id);
+		$product_id = mysql_escape_string($product_id);
 		$serviceurl = "http://" . $_SERVER['SERVER_NAME'] . ":3000/api/child_products";
 		
 		if(!empty($product_id) && $product_id != NULL) {
