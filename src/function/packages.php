@@ -18,7 +18,7 @@
 	
 	function getPackages($package_id = "")
 	{
-		$package_id  = mysql_real_escape_string($package_id);
+		$package_id  = mysql_escape_string($package_id);
 
 		$serviceurl = "http://" . $_SERVER['SERVER_NAME'] . ":3000/api/packages";
 		
@@ -31,7 +31,7 @@
 	}
 	function getSoftwarePackages($software_id = "")
 	{
-		$software_id = mysql_real_escape_string($software_id);
+		$software_id = mysql_escape_string($software_id);
 
 		$serviceurl = "http://" . $_SERVER['SERVER_NAME'] . ":3000/api/software_packages";
 		
@@ -45,7 +45,7 @@
 	
 	function getNonProductPackages($product_id = "")
 	{
-		$product_id = mysql_real_escape_string($product_id);
+		$product_id = mysql_escape_string($product_id);
 
 		$serviceurl = "http://" . $_SERVER['SERVER_NAME'] . ":3000/api/avalible_packages";
 		
