@@ -30,7 +30,7 @@ One of the requirements of companies that distribute licensed software is to not
 
 <h5>License</h5>
 <ul>
-  <li>Source  Code: <a href="https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/src/ApacheLicense">Apache 2.0</a></li>
+  <li>Source  Code: <a href="https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/src/ApacheLicense.txt">Apache 2.0</a></li>
   <li>Documentation: <a href="https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/CCLicense.txt">Creative Commmons BY-SA-3.0</a></li>
 </ul>
 
@@ -47,7 +47,7 @@ copyright © 2014 David Le, Nick Boeckman, Zachary McFarland
 
 <h5>System Design</h5>
 <ul>
-  <li><a href="https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/Documentation/Dataflow%20Diagram%20and%20Decomposition/DataflowDiagram.pdf">Data Flow Diagram</a></li>
+  <li><a href="https://github.com/zwmcfarland/ProductHistoryUtility/blob/master/img/DataFlowDiagram/DataflowDiagram.pdf">Data Flow Diagram</a></li>
 </ul>
 
 <h5>Installation</h5>
@@ -60,16 +60,16 @@ copyright © 2014 David Le, Nick Boeckman, Zachary McFarland
 <h5>Usage</h5>
 <ul>
   <li><a href="https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/img">Screen shots</a></li>
-  <li><a href="http://54.218.86.78/SPDX/phu/index.php">Working System Example</a></li>
+  <li><a href="http://54.218.86.78/SPDX/index.php">Working System Example</a></li>
 </ul>
 
 <h5>Communities</h5>
 SPDX OSS Community
 
 <h5>Communication</h5>
-<p>The Product History Utility team can be contacted through the <a href="https://lists.spdx.org/mailman/listinfo/spdx-tech">SPDX-Tech mailing list.</a></p>
+<p>The Product History Utility team can be contacted through this Github repo, simply leave quesions in the issue tracker, or contact us through our Github profiles.</a></p>
 
 <h5>Code Management</h5>
-<p>Contributions to the PHU will be decided by a community vote.</p>
+<p>Contributions to the Product History Utility will be decided by a vote of the contibuters on this repo, voting will be left to the contributers desicion.</p>
 <p>Changes to SPDX tooling standards will be brought to an <a href="https://trello.com/b/IfA3oIhe/spdx­tools">advisory board.</a></p>
 <p>Any bugs or vulnerabilites can be reported to the <a href="https://github.com/zwmcfarland/ProductHistoryUtility/issues?state=open">ProductHistoryUtility</a>'s repo.</p>
