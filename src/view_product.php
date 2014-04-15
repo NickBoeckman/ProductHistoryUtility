@@ -106,7 +106,7 @@ limitations under the License.
 		        echo '</tr>';
 				echo '<tr>';
 		        echo 	'<td class="tr-title">Product QR Code</td>';
-		        echo  '<td><a href="/ProductHistoryUtility/qr.php?product_id=' . $product_id . '">View Code</a></td>';
+		        echo  '<td><a href="qr.php?product_id=' . $product_id . '">View Code</a></td>';
 		        echo '</tr>';
 		     ?>
 	      </tbody>
