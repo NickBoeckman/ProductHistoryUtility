@@ -59,7 +59,7 @@ copyright © 2014 David Le, Nick Boeckman, Zachary McFarland
 
 <h5>Usage</h5>
 <ul>
-  <li><a href="https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/img">Screen shots</a></li>
+  <li><a href="https://github.com/zwmcfarland/ProductHistoryUtility/tree/master/Design%20Documents/ScreenShots">Screen shots</a></li>
   <li><a href="http://54.218.86.78/SPDX/index.php">Working System Example</a></li>
 </ul>
 
